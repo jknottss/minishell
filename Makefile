@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rkaufman <rkaufman@student.42wolfsburg.de> +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/18 09:14:26 by rkaufman          #+#    #+#              #
-#    Updated: 2022/04/11 09:11:39 by rkaufman         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 #valgrind --leak-check=full --show-leak-kinds=all --ignore-fn=readline ./minishell
 #valgrind --leak-check=full --show-leak-kinds=all --trace-children=yes
 
