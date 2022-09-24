@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_a.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By:  jknotts <jknotts@student.21-school>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/24 22:43:52 by jknotts           #+#    #+#             */
+/*   Updated: 2022/09/24 23:07:18 by                  ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "../../minishell.h"
 
 /*
@@ -41,11 +52,6 @@ void	ft_init_parser(t_parser *parser, t_data *data)
 	parser->tmp = data->r_line;
 	parser->tmp = ft_skip_whitespaces(parser->tmp);
 }
-
-//todo: put func in this place
-/*
- * place for int	ft_check_heredoc_end_term(char *s)
- */
 
 /*
  * return len of token, check inside echo

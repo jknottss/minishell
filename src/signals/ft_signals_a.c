@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_signals_a.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By:  jknotts <jknotts@student.21-school>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/24 22:43:52 by jknotts           #+#    #+#             */
+/*   Updated: 2022/09/24 23:07:18 by                  ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "../../minishell.h"
 
 /*
@@ -18,7 +29,6 @@ void	ft_set_parent_active(void)
 	signal(SIGQUIT, &ft_parent_active_sigquit);
 }
 
-//todo:
 void	ft_set_parent_heredoc(void)
 {
 	struct sigaction	response;
@@ -30,7 +40,6 @@ void	ft_set_parent_heredoc(void)
 	signal(SIGQUIT, SIG_IGN);
 }
 
-//todo:
 void	ft_set_child_active(void)
 {
 	signal(SIGINT, SIG_DFL);
