@@ -6,7 +6,7 @@
 /*   By:  jknotts <jknotts@student.21-school>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 22:43:52 by jknotts           #+#    #+#             */
-/*   Updated: 2022/09/24 23:14:13 by                  ###   ########.fr       */
+/*   Updated: 2022/09/24 23:19:37 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../../minishell.h"
@@ -30,4 +30,19 @@ int	ft_check_next_token(t_command *cmd, char *file)
 		return (RETURN_ERROR);
 	}
 	return (RETURN_SUCCESS);
+}
+
+int	ft_check_heredoc_end_term(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if ((s[i] < 'a' || s[i] > 'z') && (s[i] < 'A' \
+		|| s[i] > 'Z') && (s[i] < '0' || s[i] > '9'))
+			return (RETURN_FALSE);
+		i++;
+	}
+	return (RETURN_TRUE);
 }

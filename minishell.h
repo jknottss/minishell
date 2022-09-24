@@ -6,7 +6,7 @@
 /*   By:  jknotts <jknotts@student.21-school>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 22:43:52 by jknotts           #+#    #+#             */
-/*   Updated: 2022/09/24 23:18:35 by                  ###   ########.fr       */
+/*   Updated: 2022/09/24 23:35:44 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ int			ft_last_pos_in_string(char *s, char c);
 void		ft_get_filter_path(char *input, char **path, char **filter);
 t_envp		*ft_get_files(char *path);
 size_t		ft_words_in_str(char const *s, const char c);
-static void	ft_create_substrings(char const *s, const char c, char **array);
+//static void	ft_create_substrings(char const *s, const char c, char **array);
 char		**ft_split(char const *s, const char c);
 size_t		ft_count_of_in_str(const char *s, const char c);
 char		*ft_remove_char(char *s, char c);
@@ -241,3 +241,10 @@ char		**ft_create_envp_array(t_envp *envp);
 void		ft_delete_cmd(t_command **commands);
 t_command	*ft_last_cmd(t_command *cmd);
 void		ft_wait_for_kids(t_data *data);
+t_return	ft_redirect_in(t_command *cmd, t_re *re);
+t_return	ft_redirect_out_out(t_command *cmd, t_re *re);
+t_return	ft_redirect_out(t_command *cmd, t_re *re);
+void		ft_clear_mem(t_data *data);
+int			ft_check_heredoc_end_term(char *s);
+
+#endif
