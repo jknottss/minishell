@@ -90,22 +90,27 @@ void	ft_swap(t_envp **first, t_envp *swap_a)
 /*
  * sort envp list
  */
-void	ft_sort_list(t_envp **envp) {
-	t_envp *tmp;
-	int sorted;
-	int equation;
+void	ft_sort_list(t_envp **envp)
+{
+	t_envp	*tmp;
+	int		sorted;
+	int		equation;
 
 	sorted = 0;
-	while (!sorted) {
+	while (!sorted)
+	{
 		sorted = 1;
 		tmp = *envp;
-		while (tmp && tmp->next) {
+		while (tmp && tmp->next)
+		{
 			equation = ft_strncmp(tmp->var, tmp->next->var, \
-            ft_pos_in_string(tmp->var, '='));
-			if (equation > 0) {
+			ft_pos_in_string(tmp->var, '='));
+			if (equation > 0)
+			{
 				ft_swap(envp, tmp);
 				sorted = 0;
-			} else
+			}
+			else
 				tmp = tmp->next;
 		}
 	}

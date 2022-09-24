@@ -44,3 +44,21 @@ t_envp	*ft_get_files(char *path)
 	free((void *) path);
 	return (list);
 }
+
+/*
+ * count nodes envp in list
+ */
+int	ft_count_of_envp(t_envp *envp)
+{
+	t_envp	*tmp;
+	int		i;
+
+	tmp = envp;
+	i = 0;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		i++;
+	}
+	return (i);
+}
